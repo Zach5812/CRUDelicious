@@ -1,0 +1,33 @@
+@model Dish
+
+<div style="text-align: center;">
+    <form asp-action="CreateDish" asp-controller="Home" method="POST" style="display: flex; justify-content: space-evenly;">
+        <div style="display: flex; flex-direction: column; justify-content: space-evenly;">
+            <label asp-for="Chef"></label>
+            <span asp-validation-for="Chef"></span>
+            <input asp-for="Chef">
+            <label asp-for="Name"></label>
+            <span asp-validation-for="Name"></span>
+            <input asp-for="Name">
+            <label asp-for="Calories"></label>
+            <span asp-validation-for="Calories"></span>
+            <input asp-for="Calories">
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: space-evenly;">
+            <label asp-for="Tastiness"></label>
+            <select asp-for="Tastiness">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div style="display: flex; flex-direction: column; justify-content: space-evenly;">
+            <label asp-for="Description"></label>
+            <span asp-validation-for="Description"></span>
+            <textarea asp-for="Description" cols="30" rows="10"></textarea>
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</div>
